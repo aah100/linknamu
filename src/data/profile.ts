@@ -6,36 +6,35 @@ export type Profile = {
   imageUrl: string;
 };
 
+export type LinkIconName = "github" | "mail";
+
 export type LinkItem = {
   id: string;
+  icon: LinkIconName;
   title: string;
   description: string;
   url: string;
 };
 
 export const profile: Profile = {
-  name: "김클로",
-  bio: "나는야 세계 최강의 바이브코더!",
-  imageUrl: "/profile-placeholder.svg",
+  name: "김아희",
+  bio: "풀스택 개발자 | 요즘 ai 활용에 대해서 공부 중입니다!",
+  imageUrl: "/profile.jpg",
 };
 
 export const links: LinkItem[] = [
   {
     id: "github",
-    title: "GitHub",
+    icon: "github",
+    title: "깃허브",
     description: "코드와 프로젝트 저장소",
-    url: "https://github.com/",
+    url: "https://github.com/aah100",
   },
   {
-    id: "linkedin",
-    title: "LinkedIn",
-    description: "경력과 이력",
-    url: "https://www.linkedin.com/",
-  },
-  {
-    id: "blog",
-    title: "Blog",
-    description: "개발 기록과 생각들",
-    url: "https://example.com/",
+    id: "email",
+    icon: "mail",
+    title: "이메일",
+    description: "aah100@naver.com",
+    url: "mailto:aah100@naver.com",
   },
 ];

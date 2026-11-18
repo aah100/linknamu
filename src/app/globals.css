@@ -3,21 +3,36 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #2c3448;
+  /* 부드러운 페리윙클 블루 → 연한 라벤더 블루 */
+  --bg-from: #f6f8ff;
+  --bg-to: #dde6fb;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --foreground: #e8ecf7;
+    --bg-from: #151a27;
+    --bg-to: #1e2540;
   }
 }
 
 body {
+  min-height: 100vh;
   color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  background: linear-gradient(165deg, var(--bg-from) 0%, var(--bg-to) 100%)
+    fixed;
+  font-family:
+    "Pretendard Variable",
+    Pretendard,
+    -apple-system,
+    BlinkMacSystemFont,
+    system-ui,
+    "Apple SD Gothic Neo",
+    "Noto Sans KR",
+    "Malgun Gothic",
+    sans-serif;
+  word-break: keep-all;
 }
 
 @layer utilities {
